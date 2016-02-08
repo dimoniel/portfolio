@@ -1,0 +1,168 @@
+/* CSS Document */
+body {
+	margin: 0;
+}
+
+#wrapper {
+	background-color: #fff;
+}
+
+div.gallery-holder {
+	position: relative;
+	width: 900px;
+	box-sizing: border-box;
+	margin: 0 auto 10px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+div.gallery-holder .prev,
+div.gallery-holder .next {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	z-index: 4;
+}
+
+div.gallery-holder .prev {
+	left: 0;
+}
+
+div.gallery-holder .next {
+	right: 0;
+}
+
+div.gallery-holder .prev a:link,
+div.gallery-holder .next a:link,
+div.gallery-holder .prev a:visited,
+div.gallery-holder .next a:visited {
+	display: block;
+	box-sizing: border-box;
+	width: 60px;
+	height: 100%;
+	border: 2px solid #000;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+div.gallery-holder .prev a:link,
+div.gallery-holder .prev a:visited {
+	background: #ffffcc url(../images/previous.png) 50% 50% no-repeat;
+	border-radius: 10px 0 0 10px;
+}
+
+div.gallery-holder .next a:link,
+div.gallery-holder .next a:visited {
+	background: #ffffcc url(../images/next.png) 50% 50% no-repeat;
+	border-radius: 0 10px 10px 0;
+}
+
+div.gallery-holder .prev a:hover,
+div.gallery-holder .next a:hover {
+
+	background-color:#CCCC88;
+	box-shadow: inset 0 0 10px 8px #ffffcc;
+}
+
+div.gallery-holder .prev a:focus,
+div.gallery-holder .next a:focus  {
+	background-color:#CCCC88;
+}
+
+div.gallery {
+	overflow: hidden;
+	position: relative;
+	width: 900px;
+	height: 650px;
+	z-index: 1;
+	margin: 0 auto;
+}
+
+div.gallery ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+div.slide ul {
+	width: 9999px;
+	transition: margin 0.5s;
+}
+
+div.gallery ul li {
+	width: 900px;
+	height: 650px;
+	background-color: #000000;
+	overflow: hidden;
+}
+
+div.slide ul li {
+	float: left;
+}
+
+div.fade ul li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: left 0.5s;
+}
+
+div.fade ul li.active {
+	z-index: 3;
+}
+
+div.gallery ul li img {
+	display: block;
+	width: auto;
+	margin: 0 auto;
+	height: 100%;
+}
+
+div.paging {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	width: 100%;
+	z-index: 4;
+}
+
+div.paging ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	width: 100%;
+	text-align: center;
+	font-size: 0;
+}
+
+div.paging ul li {
+	display: inline-block;
+	padding: 0 10px;
+	
+}
+
+div.paging ul li a:link,
+div.paging ul li a:visited {
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	overflow: hidden;
+	text-indent: -9999px;
+	background-color: #ffffcc;
+	box-shadow: 0 0 1px 1px #000;
+}
+
+div.paging ul li.active a:link,
+div.paging ul li.active a:visited,
+div.paging ul li.active a:hover,
+div.paging ul li.active a:focus {
+	box-shadow: 0 0 1px 1px #000,
+		inset 0 0 1px 1px #000;
+	background-color: #E91619;
+}
+
+div.paging ul li a:hover,
+div.paging ul li a:focus {
+	background-color: #E91619;
+}
