@@ -1,0 +1,1052 @@
+body {
+	margin: 0 auto;
+	width: 800px;
+	background-color: #FFFFFF;
+}
+
+#wrapper {
+	padding: 84px 40px 40px;
+	width: 720px;
+	background-color: #314c5b;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1;
+	color: #FFFFFF;
+	overflow: hidden;
+}
+
+#wrapper>header {
+	margin: 0 0 76px;
+}
+
+#wrapper h1.logo {
+	font-size: 48px;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0;
+}
+
+#wrapper h1.logo span {
+	font-size: 24px;
+	text-transform: lowercase;
+	margin: 0 10px 0 0;
+}
+
+#wrapper main>section {
+	float: left;
+}
+
+#wrapper main>section:nth-of-type(3n+1) {
+	margin-right: 40px;
+}
+
+/* Style of the section graph*/
+.graph {
+	background-color: #359a88;
+	width: 340px;
+	margin-bottom: 40px;
+	padding: 24px 0 0;
+}
+
+.graph header {
+	margin: 0 34px 0;
+}
+
+.graph table {
+	border: none;
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	text-transform: uppercase;
+	font-size: 21px;
+	vertical-align: bottom;
+}
+
+.graph header table td {
+	padding: 1px 0;
+}
+
+.graph header table td:nth-of-type(1) {
+	font-size: 24px;
+	text-align: left;
+	width: 55px;
+}
+
+.graph table td:nth-of-type(2) {
+	font-size: 14px;
+	text-align: left;
+	text-transform: capitalize;
+}
+
+.graph header table td:nth-of-type(2) {
+	color: #2a7a6b;
+}
+
+.graph table td:nth-of-type(3) {
+	text-align: right;
+	width: 80px;
+	
+}
+
+.graph div figure {
+	margin: 0;
+}
+
+figure img {
+	vertical-align: middle;
+}
+
+.graph menu {
+	margin: 0;
+	padding: 15px 0;
+	background-color: #349886;
+}
+
+.graph menu ul {
+	list-style-type: none;
+	font-size: 0;
+	text-align: center;
+	padding: 0;
+}
+
+.graph menu ul li {
+	display: inline-block;
+	margin: 0 4px;
+}
+
+.graph menu ul li a:link {
+	display: block;
+	font-size: 14px;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 3px 10px;
+	
+}
+
+.graph menu ul li a:visited {
+	color: #277264;
+}
+
+.graph menu ul li.selected a:link,
+.graph menu ul li.selected a:visited  {
+	background-color: #3a9383;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 -1px 0 1px #2b7f6f;
+}
+
+.graph section {
+	background-color: #2b414d;
+	padding: 0 34px 10px;
+}
+
+.graph section table td {
+	padding: 26px 0 26px;
+	border: none;
+}
+
+.graph section td:nth-of-type(1) {
+	text-align: left;
+	width: 80px;
+}
+
+.graph section td:nth-of-type(2) {
+	color: #4b5d68;
+}
+
+.graph section tr:nth-of-type(1) td,
+.graph section tr:nth-of-type(2) td {
+	
+	border-bottom: 2px solid #334854;
+}
+
+/* Styles of the section notes*/
+.notes {
+	width: 340px;
+}
+
+.notes header {
+	padding: 22px 0 18px;
+	background-color: #207b9a;
+	position: relative;
+}
+
+.notes header p {
+	margin: 0;
+	font-size: 21px;
+	text-align: center;
+}
+
+.notes header .prev:link,
+.notes header .next:link {
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	border-radius: 50%;
+	top: 50%;
+	margin-top: -16px;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+.notes header .prev:link {
+	left: 30px;
+	background: #1b7696 url(../images/notes-arrow-left.png) no-repeat 50% 50%;
+}
+
+.notes header .next:link {
+	right: 30px;
+	background: #1b7696 url(../images/notes-arrow-right.png) no-repeat 50% 50%;
+}
+
+.notes header .prev:hover,
+.notes header .next:hover {
+	background-color: #277d9b;
+}
+
+.notes section {
+	background-color: #35a2c7;
+	position: relative;
+	text-align: center;
+	padding: 20px 0 30px;
+	margin: 0 0 40px;
+}
+
+.notes section p {
+	margin: 0;
+}
+
+.notes section .noti {
+	position: absolute;
+	top: 25px;
+	right: 61px;
+	width: 15px;
+	height: 10px;
+	border-radius: 50%;
+	color: #378ca9;
+	background-color: #FFFFFF;
+	font-size: 10px;
+	padding: 2.5px 0;
+	vertical-align: middle;
+}
+
+.notes section .date {
+	margin-bottom: 25px;
+}
+
+.notes section .date .day {
+	font-size: 160px;
+}
+
+.notes section .date .month {
+	font-size: 18px;
+	margin-top: -4px;
+	text-transform: lowercase;
+}
+
+.notes section .dayEvent {
+	font-size: 21px;
+	color: #2983a1;
+	margin-bottom: 25px;
+}
+
+.notes section .paging {
+	list-style-type: none;
+	font-size: 0;
+	text-align: center;
+	padding: 0;
+}
+
+.notes section .paging li {
+	display: inline-block;
+	margin: 0 7.5px;
+}
+
+.notes section .paging li a:link {
+	display: block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	overflow: hidden;
+	text-indent: -9999px;
+	background-color: #FFFFFF;
+}
+
+.notes section .paging li a:visited {
+	background-color: #3894b2;
+}
+
+.notes section .paging li.selected a:link,
+.notes section .paging li.selected a:visited {
+	box-sizing: border-box;
+	border: 2px solid #FFFFFF;
+}
+
+.notes footer {
+	background: #2e98b8 url(../images/notes-weather-bg.png) top left no-repeat;
+	padding: 38px 0 22px; 
+}
+
+.notes footer table {
+	border: none;
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+
+.notes footer table td.tem {
+	font-size: 60px;
+	width: 104px;
+	padding: 0 8px;
+	text-align: right;
+	vertical-align: top;
+}
+
+.notes footer table td.city {
+	font-size: 24px;
+	color: #24758f;
+	width: 110px;
+	padding: 0 8px;
+	vertical-align: top;
+	text-align: left;
+	text-transform: capitalize;
+}
+
+.notes footer table td.weather {
+	padding: 0;
+}
+
+.notes footer table td.weather img{
+	vertical-align: middle;
+}
+
+.notes footer table td.time {
+	font-size: 14px;
+	width: 110px;
+	padding: 0 8px;
+	vertical-align: top;
+	text-align: left;
+	text-transform: lowercase;
+}
+
+/* Styles of the section videoBlock*/
+
+.videoBlock {
+	position: relative;
+	margin-bottom: 40px;
+}
+
+.videoBlock figure {
+	margin: 0;
+}
+
+.videoBlock p {
+	margin: 0;
+	font-size: 14px;
+	position: absolute;
+	bottom: 18px;
+}
+
+.videoBlock p.name {
+	left: 29px;
+}
+
+.videoBlock p.time {
+	right: 29px;
+}
+
+.videoBlock .playButtonContainer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -45px 0 0 -45px;
+}
+
+.videoBlock .playButtonContainer a:link.play {
+	display: block;
+	text-indent: -9999px;
+	overflow: hidden;
+	height: 90px;
+	width: 90px;
+	background: url(../images/video-play.png) 50% 50% no-repeat;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.videoBlock .playButtonContainer a:hover.play {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.videoBlock .playButtonContainer .progressBar {
+	width: 100%;
+	height: 4px;
+	background-color: #666;
+}
+
+.videoBlock .playButtonContainer .progressBarStatus {
+	width: 70%;
+	height: 100%;
+	background-color: #cc181e;
+}
+
+/* Styles of the section calc */
+
+.calc {
+	width: 340px;
+	margin-bottom: 40px;
+}
+
+.calc header {
+	padding: 33px 32px 28px;
+	background-color: #22343e;
+}
+
+.calc header div p {
+	margin: 0;
+	text-align: right;
+}
+
+.calc header div:nth-of-type(1) p {
+	color: #748086;
+	font-size: 14px;
+	margin-bottom: 19px;
+}
+
+.calc header div:nth-of-type(2) p {
+	font-size: 42px;
+}
+
+.calc .holder table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	border: none;
+}
+
+.calc .holder table tbody tr td {
+	width: 84px;
+	height: 84px;
+	border: none;
+	padding: 0;
+	vertical-align: middle;
+}
+
+.calc .holder table tbody tr td:last-of-type {
+	width: 85px;
+}
+
+.calc .holder table td a:link,
+.calc .holder table td a:visited {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	color: #000000;
+	font-size: 36px;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	background-color: #e1e4e4;
+	
+}
+
+.calc .holder table tr a:after {
+	content: "";
+	display: inline-block;
+	width: 1px;
+	height: 100%;
+	vertical-align: middle;
+	margin: 0 0 0 -5px;
+}
+
+.calc .holder table tr:first-of-type td a:link,
+.calc .holder table tr:first-of-type td a:visited {
+	font-size: 30px;
+	background-color: #edb05a;
+}
+
+.calc .holder table tr td:last-of-type a:link,
+.calc .holder table tr td:last-of-type a:visited {
+	background-color: #db7647;
+	font-size: 30px;
+	color: #FFFFFF;
+}
+
+.calc .holder table tr:last-of-type td:nth-of-type(2) a:link,
+.calc .holder table tr:last-of-type td:nth-of-type(2) a:visited {
+	font-size: 42px;
+}
+
+.calc .holder table tr:last-of-type td:nth-of-type(1) a:link,
+.calc .holder table tr:last-of-type td:nth-of-type(1) a:visited {
+	text-align: left;
+	padding-left: 35px;
+}
+
+/* borders of buttons*/
+.calc .holder table tr:nth-of-type(2) td,
+.calc .holder table tr:nth-of-type(4) td {
+	border-top: 1px solid #2b414d;
+	border-bottom: 1px solid #2b414d;
+}
+
+.calc .holder table tr td:nth-of-type(2) {
+	border-left: 1px solid #2b414d;
+	border-right: 1px solid #2b414d;
+}
+
+.calc .holder table tr td:last-of-type {
+	border-left: 1px solid #2b414d;
+}
+
+.calc .holder table tr:nth-of-type(4) td:nth-of-type(1) a:link,
+.calc .holder table tr:nth-of-type(4) td:nth-of-type(1) a:visited,
+.calc .holder table tr:nth-of-type(4) td:nth-of-type(3) a:link,
+.calc .holder table tr:nth-of-type(4) td:nth-of-type(3) a:visited {
+	background-color: #d2d5d5;
+}
+
+/* Styles of the section statistics */
+
+.statistics {
+	box-sizing: border-box;
+	width: 340px;
+	margin-bottom: 40px;
+	padding: 37px 30px 30px;
+	background-color: #f6f6f6;
+}
+
+.statistics header {
+	margin: 0 0 21px;
+	padding: 0 5px;
+	overflow: hidden;
+}
+
+.statistics header p {
+	margin: 0;
+	padding: 1px 0;
+	text-transform: uppercase;
+	font-size: 24px;
+	color: #2b414d;
+	float: left;
+}
+
+.statistics header a {
+	width: 29px;
+	height: 26px;
+	float: right;
+	text-indent: -9999px;
+	background: url(../images/statistics-refresh.png) top left no-repeat;
+}
+
+.statistics section {
+	margin: 0 0 33px;
+}
+
+.statistics section div.diagramm {
+	margin-bottom: 17px;
+}
+
+.statistics section div figure {
+	margin: 0;
+}
+
+.statistics section table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	border: none;
+}
+
+.statistics section table.pageviews {
+	margin: 0 0 30px;
+}
+
+.statistics section table.pageviews tr:nth-of-type(1) td:nth-of-type(1) {
+	padding: 0;
+	font-size: 60px;
+	color: #f4b459;
+	width: 165px;
+}
+
+.statistics section table.pageviews tr:nth-of-type(1) td:nth-of-type(2) {
+	padding: 0 0 4px;
+	font-size: 18px;
+	color: #f4b459;
+	vertical-align: bottom;
+}
+
+.statistics section table.pageviews tr:nth-of-type(2) td:nth-of-type(1) {
+	padding: 4px 0 0;
+	font-size: 18px;
+	color: #2b414d;
+	vertical-align: top;
+}
+
+.statistics section table.chart tr td {
+	font-size: 14px;
+	color: #000000;
+	padding: 0;
+}
+
+.statistics section table.chart tr:nth-of-type(1) td:nth-of-type(1) {
+	padding: 2px 0 2px 5px;
+	width: 156px;
+	text-align: left;
+}
+
+.statistics section table.chart tr:nth-of-type(1) td:nth-of-type(2),
+.statistics section table.chart tr:nth-of-type(2) td:nth-of-type(1),
+.statistics section table.chart tr:nth-of-type(3) td:nth-of-type(1) {
+	padding: 6px 0;
+	width: 27px;
+}
+
+.statistics section table.chart tr:nth-of-type(1) td:nth-of-type(3),
+.statistics section table.chart tr:nth-of-type(2) td:nth-of-type(2),
+.statistics section table.chart tr:nth-of-type(3) td:nth-of-type(2) {
+	width: 60px;
+}
+
+.statistics section table.chart tr:nth-of-type(1) td:nth-of-type(4),
+.statistics section table.chart tr:nth-of-type(2) td:nth-of-type(3),
+.statistics section table.chart tr:nth-of-type(3) td:nth-of-type(3) {
+	text-align: right;
+	padding-right: 5px;
+}
+
+.statistics section table.chart tr:nth-of-type(1) td:nth-of-type(2) div,
+.statistics section table.chart tr:nth-of-type(2) td:nth-of-type(1) div,
+.statistics section table.chart tr:nth-of-type(3) td:nth-of-type(1) div {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+}
+
+.statistics section table.chart tr:nth-of-type(1) td:nth-of-type(2) div {
+	background-color: #3db39e;
+}
+
+.statistics section table.chart tr:nth-of-type(2) td:nth-of-type(1) div {
+	background-color: #e2574c;
+}
+
+.statistics section table.chart tr:nth-of-type(3) td:nth-of-type(1) div {
+	background-color: #26a6d1;
+}
+
+.statistics section table.chart tr:nth-of-type(1) td:nth-of-type(4) {
+	color: #3db39e;
+}
+
+.statistics section table.chart tr:nth-of-type(2) td:nth-of-type(3) {
+	color: #e2574c;
+}
+
+.statistics section table.chart tr:nth-of-type(3) td:nth-of-type(3) {
+	color: #26a6d1;
+}
+
+.statistics footer {
+	margin: 0 5px;
+	padding-top: 30px;
+	border-top: 1px solid #e5e5e5;
+	overflow: hidden;
+}
+
+.statistics footer p {
+	margin: 0;
+	padding: 2px 0;
+	text-transform: capitalize;
+	font-size: 14px;
+	color: #c39047;
+	float: left;
+}
+
+.statistics footer a:link,
+.statistics footer a:visited {
+	padding: 2px 0 2px 25px;
+	font-size: 14px;
+	color: #717171;
+	text-decoration: none;
+	float: right;
+	background: url(../images/statistics-settings.png) top left no-repeat;
+}
+
+/* Styles of the section map block */
+
+.mapBlock {
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 40px;
+}
+
+.mapBlock div figure {
+	margin: 0;
+}
+
+.mapBlock #marker {
+	position: absolute;
+	width: 22px;
+	height: 31px;
+	left: 280px;
+	top: 233px;
+	background: url(../images/map-arrow.png) top left no-repeat;
+}
+
+.mapBlock aside {
+	width: 60px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	overflow: hidden;
+	background-color: rgba(40, 60, 70, 0.9);
+}
+
+.mapBlock aside #zoom {
+	width: 100%;
+	height: 207px;
+	position: absolute;
+	top: 25px;
+	right: 0;
+}
+
+.mapBlock aside a:link {
+	width: 23px;
+	height: 23px;
+	position: absolute;
+	right: 30px;
+	margin-right: -11.5px;
+	border-radius: 50%;
+	overflow: hidden;
+	text-indent: 9999px;
+	overflow: hidden;
+}
+
+.mapBlock aside>a:nth-of-type(1):link {
+	background: #2e4048 url(../images/map-minus.png) 50% 50% no-repeat;
+	top: 259px;
+}
+
+.mapBlock aside>a:nth-of-type(2):link {
+	background: #2e4048 url(../images/map-location-button.png) 50% 50% no-repeat;
+	top: 317px;
+}
+
+.mapBlock aside #zoom>a:nth-of-type(1):link {
+	background: #2e4048 url(../images/map-plus.png) 50% 50% no-repeat;
+	top: 0;
+}
+
+.mapBlock aside #zoom>a:nth-of-type(2):link {
+	background: #2e4048 url(../images/map-minus.png) 50% 50% no-repeat;
+	bottom: 0;
+}
+
+.mapBlock aside a:hover {
+	background-color: #2a404b
+}
+
+aside #zoom #slider {
+	width: 7px;
+	height: 120px;
+	position: absolute;
+	right: 30px;
+	top: 44px;
+	margin-right: -3.5px;
+	background-color: #e9ecec;
+	border-radius: 3.5px;
+	cursor: pointer;
+}
+
+aside #zoom #slider div {
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	border-radius: 50%;
+	right: 3.5px;
+	top: 19px;
+	margin-right: -9px;
+	background-color: #fff;
+}
+
+/* Styles of the section calendar*/
+.calendar {
+	width: 340px;
+	background-color: #2b414d;
+}
+
+.calendar header {
+	margin: 0 0 10px;
+	padding: 30px 0 28px;
+	position: relative;
+	border-bottom: 2px solid #22343e;
+}
+
+.calendar header p {
+	margin: 0;
+	font-size: 24px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.calendar header p span {
+	color: #efc75e;
+}
+
+.calendar header .prev:link,
+.calendar header .next:link {
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	border-radius: 50%;
+	top: 50%;
+	margin-top: -16px;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+.calendar header .prev:link {
+	left: 30px;
+	background: #293d49 url(../images/notes-arrow-left.png) no-repeat 50% 50%;
+}
+
+.calendar header .next:link {
+	right: 30px;
+	background: #293d49 url(../images/notes-arrow-right.png) no-repeat 50% 50%;
+}
+
+.calendar header .prev:hover,
+.calendar header .next:hover {
+	background-color: #3f535e;
+}
+
+.calendar section {
+	margin-bottom: 15px;
+}
+
+.calendar section table {
+	margin: 0 auto;
+	border: none;
+	border-collapse: separate;
+	border-spacing: 8px;
+}
+
+.calendar section table th,
+.calendar section table td {
+	padding: 0;
+	border: none;
+	width: 36px;
+	height: 36px;
+	font-size: 21px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.calendar section table th {
+	height: 40px;
+	font-size: 14px;
+	text-transform: lowercase;
+}
+
+.calendar section table td {
+	position: relative;
+}
+
+.calendar section table td:nth-of-type(6),
+.calendar section table td:nth-of-type(7) {
+	color: #697981;
+}
+
+.calendar section table td.note:after {
+	content: "";
+	width: 4px;
+	height: 4px;
+	position: absolute;
+	background-color: #fff;
+	left: 50%;
+	margin-left: -2px;
+	bottom: 0;
+	margin-bottom: -1px;
+}
+
+.calendar section table td#today {
+	color: #2b414d;
+	background-color: #eaecee;
+}
+
+.calendar section table td#today[class~="note"]:after {
+	background-color: #2b414d;
+	margin-bottom: 0;
+}
+
+.calendar footer {
+	padding: 22px 0 34px;
+	border-top: 2px solid #22343e;
+}
+
+.calendar footer p {
+	margin: 0 26px;
+	font-size: 14px;
+	line-height: 21px;
+	text-align: left;
+}
+
+.calendar footer p:nth-of-type(1) {
+	color: #b59f59;
+	margin-bottom: 10px;
+}
+
+/* Styles of the section userData*/
+.userData {
+	width: 340px;
+	background-color: #f6f6f6;
+}
+
+.userData header,
+.userData section,
+.userData footer {
+	width: 280px;
+	margin: 0 auto;
+}
+
+.userData header {
+	margin-bottom: 23px;
+	padding-top: 31px;
+	border-bottom: 1px solid #e4e7e7;
+	position: relative;
+}
+
+.userData header figure {
+	margin: 0 0 27px;
+}
+
+.userData header figure img {
+	float: left;
+	width: 172px;
+	height: 172px;
+	margin: 0 0 28px;
+	border: 4px solid #e4e7e7;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.userData header figure figcaption {
+	clear: both;
+	font-size: 18px;
+	color: #bf392b;
+	text-transform: capitalize;
+}
+
+.userData header figure figcaption a:link,
+.userData header figure figcaption a:visited {
+	font-size: 14px;
+	color: #ccd0d2;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding-left: 19px;
+}
+
+
+.userData header table {
+	width: 78px;
+	font-size: 12px;
+	border-collapse: collapse;
+	border-spacing: 0;
+	position: absolute;
+	top: 33px;
+	right: 0;
+	text-align: left;
+}
+
+.userData header table th {
+	padding: 7px 0;
+	height: 25px;
+	color: #465964;
+	text-transform: uppercase;
+	vertical-align: bottom;
+}
+
+.userData header table td {
+	color: #e48154;
+}
+
+.userData section {
+	overflow: hidden;
+}
+
+.userData section p {
+	margin: 0 0 18px;
+	font-size: 14px;
+	line-height: 21px;
+	color: #324d5b;
+}
+
+.userData section menu {
+	margin: 0 0 57px; 
+	padding: 0;
+	float: left;
+}
+
+.userData section ul {
+	padding: 0;
+	font-size: 0;
+}
+
+.userData section ul li {
+	display: inline-block;
+	margin-right: 14px;
+}
+
+.userData section ul li a:link,
+.userData section ul li a:visited {
+	display: block;
+	font-size: 12px;
+	color: #992e22;
+	text-transform: capitalize;
+	text-decoration: none;
+}
+
+.userData section menu+p {
+	margin: 0 26px 0;
+	font-size: 12px;
+	line-height: 1;
+	color: #cfd3d4;
+	float: right;
+}
+
+.userData footer {
+	padding: 30px;
+	background-color: #e37948;
+	overflow: hidden;
+}
+
+.userData footer a:nth-of-type(1):link,
+.userData footer a:nth-of-type(1):visited {
+	display: block;
+	float: left;
+	width: 66px;
+	height: 15px;
+	padding: 10px 0 9px 54px;
+	border: 4px solid #b56740;
+	background: #d37144 url(../images/userdata-twitter-bird.png) 21px 50% no-repeat;
+	font-size: 15px;
+	color: #fff;
+	text-transform: capitalize;
+	text-decoration: none;
+}
+
+.userData footer a:nth-of-type(1):hover {
+	border: 4px solid #bc6b43;
+	background-color: #e1855a;
+}
+
+.userData footer a:nth-of-type(2):link,
+.userData footer a:nth-of-type(2):visited {
+	display: block;
+	margin: 16px 13px 0 0;
+	float: right;
+	font-size: 12px;
+	color: #fff;
+	text-decoration: none;
+}
