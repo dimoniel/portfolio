@@ -1,0 +1,235 @@
+<!doctype html>
+
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Форма для заполнения</title>
+        
+        <style>
+			
+			body {
+				margin: 0;
+				padding: 10px 0 0;
+				background-color: #c9c9c9;
+				font-size: medium;
+				line-height: 1.25;
+				font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+				color: #fff;
+			}
+			
+			div#wrapper {
+				width: 600px;
+				margin: 0 auto;
+				background-color: #0A249C;
+				overflow: hidden;
+			}
+			
+			header {
+				margin: 0 0 10px;
+			}
+			
+			header h1 {
+				margin: 0;
+				font-size: 24px;
+				text-align: center; 
+			}
+			
+			main {
+				margin: 0 0 10px;
+			}
+			
+			main form {
+				padding: 0 20px;
+			}
+			
+			main form fieldset {
+				margin: 0;
+				padding: 0 10px 0 20px;
+				border: 4px double #fff;
+			}
+			
+			main form fieldset legend {
+				font-size: 14px;
+			}
+			
+			main form fieldset>div {
+				margin: 0 0 10px;
+			}
+			
+			main form fieldset>div label {
+				display: inline-block;
+				margin: 0 0 5px;
+			}
+			
+			main form fieldset>div>div {
+				width: 250px;
+				padding-left: 15px;
+			}
+			
+			main form fieldset>div:last-of-type {
+				text-align: center;
+			}
+			
+			main form fieldset>div>div input {
+				width: 200px;
+				box-sizing: border-box;
+				padding: 4px 5px;
+				height: 30px;
+				font-size: 16px;
+				color: #000;
+				border: none;
+				border-radius: 5px;
+				background-color: #DEE7D5;
+				
+			}
+			
+			main form fieldset>div>div input:focus {
+				background-color: #fff;
+			}
+			
+			main form fieldset>div>div.ok {
+				background: transparent url(img/ok.png) no-repeat right 50%;
+			}
+			
+			main form fieldset>div>div.no {
+				background: transparent url(img/no.png) no-repeat right 50%;
+			}
+			
+			main form fieldset>div input {
+				width: 100px;
+				height: 30px;
+				font-size: 14px;
+				border-radius: 5px;
+			}
+			
+			footer {
+				margin: 0 0 5px;
+			}
+			
+			footer p {
+				margin: 0;
+				font-size: 0;
+				text-align: center;
+			}
+			
+			footer small {
+				font-size: 12px;
+			}
+			
+		</style>
+        
+        <script>
+			
+			window.onload = init;
+			
+			function init() {
+				var inputArray = [];
+				var regExpArray = [
+									new RegExp("(^[A-Z]{1}[a-z]+$)|(^[А-Я]{1}[а-я]+$)"),
+									new RegExp("(^[A-Z]{1}[a-z]+$)|(^[А-Я]{1}[а-я]+$)"),
+									new RegExp("(^[A-Za-z0-9-_]+@[a-z0-9-_]{2,}\\.[a-z]{2,6}$)"),
+									new RegExp("(^\\+\\d{1,3}[\\s-]?\\d{1,3}[\\s-]?\\d{3}[\\s-]?\\d{4}$)"),
+									new RegExp("(^[\\w_]{6,18}$)")
+									];
+				var inputColl = document.querySelectorAll("div>div input");
+				
+				var form = document.getElementsByTagName("FORM")[0];
+				form.addEventListener("submit", send, false);
+				
+				for (var i = 0; i < inputColl.length; i++) {
+					inputArray.push(inputColl[i]);
+					inputArray[i].addEventListener("blur", check, false);
+				}
+				
+				function send(e) {
+					e.preventDefault();
+					for (var i = 0; i < inputArray.length; i++) {
+						if (!/ok/i.test(inputArray[i].parentNode.className)) {
+							alert("Форма не заполнена");
+							return;
+						}
+					}
+					var obj = new Creator(inputArray);
+					console.log(obj);
+				};
+				
+				function check(e) {
+					var index = inputArray.indexOf(e.target);
+					
+					if (regExpArray[index].test(inputArray[index].value)) {
+						inputArray[index].parentNode.setAttribute("class", "ok");
+					} else {
+						inputArray[index].parentNode.setAttribute("class", "no");
+					}
+				}
+				
+				function Creator(array) {
+					for (var i = 0; i < array.length; i++) {
+						this[array[i].name] = array[i].value;
+					}
+				}
+			};
+			
+		</script>
+        
+	</head>
+
+	<body>
+		
+        <div id="wrapper">
+        	<header>
+            	<h1>Форма для заполнения</h1>
+            </header>
+            
+            <main>
+				<form method="post">
+        			<fieldset>
+            			<legend>Контактные данные</legend>
+            			<div>
+                        	<label for="name">Имя</label>
+                            <div>
+                            	<input type="text" id="name" name="userName" placeholder="Введите имя" required="required" />
+                            </div>
+          				</div>
+                        <div>
+                        	<label for="surname">Фамилия</label>
+                            <div>
+                            	<input type="text" id="surname" name="userSurname" placeholder="Введите Фамилию" required="required" />
+                            </div>
+          				</div>
+                        <div>
+                        	<label for="email">Электронная почта</label>
+                            <div>
+                            	<input type="email" id="email" name="userEmail" placeholder="Введите e-mail адрес" required="required" />
+                            </div>
+          				</div>
+                        <div>
+                        	<label for="tel">Номер телефона</label>
+                            <div>
+                            	<input type="tel" id="tel" name="userTel" placeholder="+XX XXX XXX XXXX" required="required" />
+                            </div>
+          				</div>
+                        <div>
+                        	<label for="password">Пароль</label>
+                            <div>
+                            	<input type="password" id="password" name="userPassword" placeholder="Пароль min 6 знаков" required="required" />
+                            </div>
+          				</div>
+                        <div>
+                        	<input type="submit" id="submit" value="Отправить" />
+                        </div>
+            		</fieldset>
+        		</form>
+        	</main>
+            
+            <footer>
+            	<p>
+    				<small>&copy;2015 Designed by Dmitry Fedorenko</small>
+                </p>
+    		</footer>
+        </div>
+
+	</body>
+
+</html>
