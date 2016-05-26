@@ -29,7 +29,10 @@ function init() {
 		},
 
 		validate: function(attrs, options) {
-			if ( !(/(^[A-Z]{1}[a-z]+$)|(^[А-Я]{1}[а-я]+$)/.test(attrs.userName)) ) {
+			var cirNameRegExp = "(^[А-Я]{1}[а-я]+(?: [А-Я]{1}[а-я]+)*$)";
+			var latNameRegExp = "(^[A-Z]{1}[a-z]+(?: [A-Z]{1}[a-z]+)*$)";
+			var nameRegExp = new RegExp(cirNameRegExp + "|" + latNameRegExp);
+			if ( !(nameRegExp.test(attrs.userName)) ) {
 				return "Name is not validate";
 			}
 			else if (!attrs.date) {
