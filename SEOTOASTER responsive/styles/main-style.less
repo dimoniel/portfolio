@@ -1,5 +1,5 @@
 /* LESS Document */
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300italic,700,300|Raleway:800,500);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300italic,700,500,300,900|Raleway:800,500);
 
 @content-width: 1200px;
 @bg-color: #fff;
@@ -27,6 +27,7 @@ body {
 	font-family: "Roboto", Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	line-height: 1.5;
+	font-weight: 500;
 	color: @font-color;
 }
 
@@ -103,6 +104,7 @@ body {
 							a:hover, a:focus, a:active {
 								display: inline-block;
 								padding: 0 10px;
+								letter-spacing: 3px;
 								text-decoration: none;
 								text-transform: uppercase;
 								color: #fff;
@@ -116,6 +118,13 @@ body {
 								color: #6556df;
 								cursor: pointer;
 							}
+
+							&:last-of-type {
+								a:link, a:visited, 
+								a:hover, a:focus, a:active {
+									padding-right: 0;
+								}
+							}
 						}
 					}
 				}
@@ -128,7 +137,7 @@ body {
 		>section:first-of-type {
 			.content;
 			overflow: hidden;
-			margin-bottom: 65px;
+			margin-bottom: 57px;
 
 			figure {
 
@@ -144,15 +153,16 @@ body {
 				padding-left: 24px;
 
 				h1 {
-					margin: 0 0 10px;
+					margin: 0 0 17px;
 					font-size: 46px;
 					line-height: 1;
-					font-weight: normal;
+					font-weight: 900;
+					letter-spacing: 4px;
 					text-transform: uppercase;
 				}
 
 				h2 {
-					margin: 0 0 27px;
+					margin: 0 0 20px;
 					font-family: "Raleway", Arial, Helvetica, sans-serif;
 					font-size: 18px;
 					line-height: 24px;
@@ -160,20 +170,20 @@ body {
 				}
 
 				p {
-					margin: 0 0 24px; 
+					margin: 0 0 20px;
+					
+					&:first-of-type {
+						max-width: 550px;
+					}
 				}
 
 				ul {
-					padding-left: 16px;
-					list-style: square outside none;
-					color: #6556df;
+					list-style-type: none;
 
 					li{
 						margin: 0 0 3px;
-						span {
-							margin-left: -4px;
-							color: @font-color;
-						}
+						padding-left: 12px;
+						background: url("../images/bgs/dot.png") transparent no-repeat 1px 7px;
 					}
 				}
 
@@ -201,22 +211,28 @@ body {
 			
 			div#users-container {
 				.content;
-				padding: 141px 0 68px; 
+				padding: 141px 0 73px; 
 				overflow: hidden;
 
 				article {
-					width: 50%;
-					margin-bottom: 100px;
+					width: 49%;
+					margin-bottom: 98px;
 					
 					div.article-container {
 						box-sizing: border-box;
 						width: 384px;
-						padding-top: 10px;
+						padding-top: 8px;
 
 						h2 {
 							font-size: 18px;
 							font-weight: 700;
 							margin: 0 0 5px;
+							letter-spacing: 2px;
+						}
+
+						p {
+							letter-spacing: 2px;
+							line-height: 20px;
 						}
 					}
 				}
@@ -233,7 +249,7 @@ body {
 
 						figure {
 							float: left;
-							margin: -10px 0 0 -56px;
+							margin: -8px 0 0 -56px;
 						}
 					}
 				}
@@ -250,7 +266,7 @@ body {
 
 						figure {
 							float: right;
-							margin: -10px -56px 0 0;
+							margin: -8px -56px 0 0;
 						}
 					}
 				}
@@ -260,7 +276,7 @@ body {
 		form#messageForm {
 			.content;
 			max-width: 432px;
-			padding: 75px 0 100px;
+			padding: 65px 0 100px;
 			text-align: center;
 			line-height: 1;
 
@@ -268,18 +284,19 @@ body {
 				border: none;
 
 				h2 {
-					margin: 0 0 30px;
+					margin: 0 0 23px;
 					font-size: 46px;
 					font-weight: 800;
 					text-transform: uppercase;
+					letter-spacing: 5px;
 				}
 
 				p {
-					margin: 0 0 40px;
+					margin: 0 0 35px;
 				}
 
 				div {
-					margin: 0 0 17px;
+					margin: 0 0 15px;
 
 					&:last-of-type {
 						margin: 0 0 30px;
@@ -290,6 +307,7 @@ body {
 						float: left;
 						font-size: 18px;
 						line-height: 21px;
+						margin: 0 0 3px;
 					}
 
 					input, textarea {
@@ -317,6 +335,7 @@ body {
 					textarea {
 					resize: none;
 					height: 120px;
+					overflow-y: auto;
 					}
 
 					.invalid {
@@ -364,7 +383,7 @@ body {
 	}
 
 	#wrapper header div#header-container div#link-container nav ul {
-		width: 120px;
+		width: 150px;
 		margin: 0;
 		padding: 0;
 
